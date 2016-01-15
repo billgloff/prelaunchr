@@ -1,13 +1,14 @@
 source 'https://rubygems.org'
 
-ruby '2.2.0'
+ruby '2.3.0'
+
+gem 'rails', '4.2.5'
 
 gem 'activeadmin', github: 'activeadmin'
 gem 'delayed_job_active_record', '~> 4.0.3'
 gem 'devise'
-gem 'inherited_resources', github: 'josevalim/inherited_resources', branch: 'rails-4-2'
+gem 'inherited_resources'
 gem 'pg'
-gem 'rails', '4.2.0'
 gem 'unicorn'
 
 group :assets do
@@ -22,7 +23,8 @@ group :development do
 end
 
 group :development, :test do
-  gem "dotenv-rails"
+  gem 'dotenv-rails'
+  gem 'mailcatcher'
 end
 
 group :production do
